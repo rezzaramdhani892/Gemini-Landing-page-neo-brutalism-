@@ -1,0 +1,6 @@
+{
+  "name": "Neo-Brutalist Personal Website",
+  "description": "A high-integrity, bold, premium personal website landing page styled in neo-brutalism design language with custom interactive panels, bento grid, and high contrast typography.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
