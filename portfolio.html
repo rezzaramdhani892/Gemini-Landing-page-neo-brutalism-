@@ -1,0 +1,1313 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MAX DEVEREUX // NEO-BRUTALIST PORTFOLIO</title>
+  
+  <!-- Tailwind CSS v4 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  
+  <!-- Google Fonts: Anton (Display) & Space Grotesk (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <style type="text/css">
+    body {
+      background-color: #FAFAFA;
+      color: #000000;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    /* Neo-Brutalist utility custom styles */
+    .font-display {
+      font-family: 'Anton', sans-serif;
+    }
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .brutalist-border {
+      border: 4px solid #000000;
+    }
+    .brutalist-border-md {
+      border: 6px solid #000000;
+    }
+    .brutalist-border-sm {
+      border: 2px solid #000000;
+    }
+
+    .brutalist-shadow {
+      box-shadow: 8px 8px 0px 0px #000000;
+    }
+    .brutalist-shadow-sm {
+      box-shadow: 4px 4px 0px 0px #000000;
+    }
+    .brutalist-shadow-lg {
+      box-shadow: 12px 12px 0px 0px #000000;
+    }
+
+    /* Infinite marquee animation keyframe */
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: max-content;
+      animation: marquee 16s linear infinite;
+    }
+    .animate-marquee-reverse {
+      display: flex;
+      width: max-content;
+      animation: marquee 16s linear infinite reverse;
+    }
+
+    /* Grid overlay pattern */
+    .bg-grid {
+      background-size: 24px 24px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FAFAFA;
+      border-left: 4px solid #000000;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #FF6B00;
+      border: 4px solid #000000;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #FFD600;
+    }
+  </style>
+</head>
+<body class="min-h-screen py-4 px-4 md:py-8 md:px-8 flex flex-col items-center">
+
+  <div class="w-full max-w-7xl flex flex-col gap-8">
+    
+    <!-- HEADER -->
+    <header class="w-full flex flex-col sm:flex-row justify-between items-stretch gap-4">
+      <div class="bg-black text-white px-5 py-3 brutalist-border flex items-center gap-3 brutalist-shadow select-none">
+        <span class="w-4 h-4 bg-[#00FF00] rounded-full inline-block animate-pulse"></span>
+        <span class="font-display text-2xl md:text-3xl tracking-tighter uppercase" id="header-logo">
+          MAXWELL.OS // 2026
+        </span>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-2.5">
+        <button onclick="toggleEditor()" class="bg-[#00FF00] text-black font-mono font-black text-xs uppercase px-4 py-3 brutalist-border brutalist-shadow-sm hover:translate-y-[2px] transition-transform cursor-pointer flex items-center gap-2">
+          ⚙️ BUILD / CLAIM PORTFOLIO
+        </button>
+        <a href="https://github.com" target="_blank" class="bg-[#FFD600] text-black p-3 hover:bg-black hover:text-[#FFD600] brutalist-border brutalist-shadow-sm transition-all font-bold">
+          GH
+        </a>
+        <a href="https://linkedin.com" target="_blank" class="bg-[#FF90E8] text-black p-3 hover:bg-black hover:text-[#FF90E8] brutalist-border brutalist-shadow-sm transition-all font-bold">
+          IN
+        </a>
+        <button onclick="alert('RESUME CAPTURED IN OFFLINE ARCHIVE!')" class="bg-white text-black font-mono font-bold text-xs uppercase px-4 py-3 brutalist-border brutalist-shadow-sm hover:bg-[#FF6B00] cursor-pointer">
+          💾 GET RESUME
+        </button>
+      </div>
+    </header>
+
+    <!-- MARQUEE BANNER -->
+    <div class="w-full overflow-hidden border-y-4 border-black bg-[#FFD600] py-3 select-none flex">
+      <div class="animate-marquee">
+        <!-- Text is duplicated twice to ensure a continuous flowing visual band -->
+        <span class="font-display text-lg font-black tracking-widest uppercase mr-12 text-black">✦ PORTFOLIO GENERATED IN STANDALONE OFFLINE HTML ✦</span>
+        <span class="font-display text-lg font-black tracking-widest uppercase mr-12 text-black">✦ REJECT BORING WEB TEMPLATES ✦</span>
+        <span class="font-display text-lg font-black tracking-widest uppercase mr-12 text-black">✦ FULLY PORTABLE PORTFOLIO FILE ✦</span>
+        <span class="font-display text-lg font-black tracking-widest uppercase mr-12 text-black">✦ USER DATA PERSISTS VIA LOCAL STORAGE ✦</span>
+        <span class="font-display text-lg font-black tracking-widest uppercase mr-12 text-black">✦ PORTFOLIO GENERATED IN STANDALONE OFFLINE HTML ✦</span>
+        <span class="font-display text-lg font-black tracking-widest uppercase mr-12 text-black">✦ REJECT BORING WEB TEMPLATES ✦</span>
+        <span class="font-display text-lg font-black tracking-widest uppercase mr-12 text-black">✦ FULLY PORTABLE PORTFOLIO FILE ✦</span>
+        <span class="font-display text-lg font-black tracking-widest uppercase mr-12 text-black">✦ USER DATA PERSISTS VIA LOCAL STORAGE ✦</span>
+      </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+      <!-- Info Column -->
+      <div class="lg:col-span-7 bg-[#FAFAFA] brutalist-border p-6 md:p-8 brutalist-shadow bg-grid flex flex-col justify-between space-y-6">
+        <div class="space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#FF90E8] border-2 border-black text-xs font-mono font-black uppercase text-white tracking-wider brutalist-shadow-sm select-none">
+            ⚡️ SYSTEM OFFLINE-READY
+          </div>
+
+          <h1 class="font-display text-5xl sm:text-7xl md:text-8xl leading-[0.85] uppercase tracking-tight text-black mt-2">
+            Building<br/>Digital<br/>Utopia
+          </h1>
+
+          <div class="font-sans text-xl md:text-2xl font-bold uppercase mt-4 text-stone-800">
+            Hi, I'm <span id="hero-name-badge" class="bg-[#FFD600] px-2 inline-block brutalist-border-sm rotate-1 translate-y-1 text-black font-display text-2xl md:text-3xl">MAX DEVEREUX</span>, <br />
+            <span id="hero-role-badge" class="text-[#FF6B00] font-bold font-display text-lg md:text-xl block mt-2">
+              CREATIVE SITE WEB ARCHITECT
+            </span>
+          </div>
+
+          <p id="hero-bio-badge" class="font-sans text-sm md:text-base text-stone-700 uppercase leading-relaxed font-bold border-l-4 border-black pl-4 my-4">
+            Crafting extremely loud interfaces, solid backend architectures, and high-contrast digital playgrounds. Let's build the future with giant thick borders.
+          </p>
+        </div>
+
+        <div class="space-y-4 pt-4 border-t-2 border-black/15">
+          <div id="hero-tags-container" class="flex flex-wrap gap-1.5">
+            <span class="px-2.5 py-1 bg-white brutalist-border-sm text-[10px] sm:text-xs font-mono font-black text-black select-none uppercase hover:bg-[#A2D2FF]">#NEOBRUTALISM</span>
+            <span class="px-2.5 py-1 bg-white brutalist-border-sm text-[10px] sm:text-xs font-mono font-black text-black select-none uppercase hover:bg-[#A2D2FF]">#HTML_PORTABLE</span>
+            <span class="px-2.5 py-1 bg-white brutalist-border-sm text-[10px] sm:text-xs font-mono font-black text-black select-none uppercase hover:bg-[#A2D2FF]">#TAILWIND_V4</span>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+            <div class="flex items-center gap-2 text-xs font-mono text-stone-600 bg-stone-100 p-2 border border-stone-300">
+              📍 <span id="hero-location-badge">UTC+7 / TOKYO-JAKARTA TIMEZONE</span>
+            </div>
+            <button onclick="copyLocation()" class="px-3 py-1.5 bg-black text-white hover:bg-[#00FF00] hover:text-black font-mono text-[10px] font-bold uppercase brutalist-border-sm cursor-pointer select-none transition-all duration-100">
+              COPY TIMEZONE ID
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Avatar Column -->
+      <div class="lg:col-span-5 border-4 border-black bg-[#FFD600] brutalist-shadow relative overflow-hidden flex items-center justify-center p-6 md:p-8 select-none">
+        <div class="absolute top-3 left-3 bg-white border-2 border-black font-mono text-[9px] px-1.5 py-0.5 font-black uppercase text-black">
+          STANDALONE
+        </div>
+        <div class="absolute bottom-3 right-3 bg-[#FF90E8] border-2 border-black font-mono text-[9px] px-1.5 py-0.5 font-black uppercase text-white">
+          PORTFOLIO EXP
+        </div>
+
+        <div class="relative border-4 border-black bg-white p-3 brutalist-shadow flex flex-col justify-between items-center w-full max-w-sm">
+          <img 
+            id="hero-avatar-img"
+            src="./src/assets/images/avatar_male_hoodie_1781199576411.jpg" 
+            alt="Profile Avatar" 
+            class="w-full aspect-square object-cover border-2 border-black grayscale contrast-110 hover:grayscale-0 transition-all duration-300 pointer-events-none"
+            onerror="this.src='https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=400'"
+          />
+          <div class="w-full border-t-2 border-black mt-3 pt-3 flex justify-between items-center">
+            <span class="font-display text-sm font-black uppercase">MAXWELL.PIX</span>
+            <span class="font-mono text-[10px] text-stone-500 uppercase">300 DPI</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OPERATOR DECK & STICKER SANDBOX -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+      
+      <!-- TOOLKIT / OPERATOR DESK -->
+      <div class="w-full h-full bg-[#FAFAFA] brutalist-border p-6 brutalist-shadow bg-grid flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-center border-b-4 border-black pb-4 mb-5">
+            <h3 class="font-display text-xl font-black uppercase text-black flex items-center gap-2">
+              💻 OPERATOR DESK
+            </h3>
+            <span class="font-mono text-xs bg-black text-white px-2 py-1 font-bold">
+              OS // STATIC_v1.0
+            </span>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3 mb-5">
+            <div class="brutalist-border bg-white p-3 brutalist-shadow-sm flex flex-col items-center justify-center relative overflow-hidden">
+              <span class="absolute top-1 left-1.5 font-mono text-[9px] uppercase font-black text-stone-500">LOCAL CLOCK</span>
+              <span class="font-mono text-xs text-stone-700 mt-2">SYSTEM TIME</span>
+              <p id="local-clock-display" class="font-display text-base md:text-lg font-black tracking-widest text-black mt-1">
+                12:00:00 AM
+              </p>
+            </div>
+            <div class="brutalist-border bg-white p-3 brutalist-shadow-sm flex flex-col items-center justify-center relative overflow-hidden">
+              <span class="absolute top-1 left-1.5 font-mono text-[9px] uppercase font-black text-stone-500">SIGNAL STATUS</span>
+              <span class="font-mono text-xs text-stone-700 mt-2">ACTIVE IN WEB</span>
+              <p class="font-display text-xs md:text-sm font-black tracking-wide text-[#FF6B00] mt-1">
+                ⬤ GREEN SIGNAL
+              </p>
+            </div>
+          </div>
+
+          <!-- Fuel converter / Coffee meter -->
+          <div class="border-4 border-black bg-white p-4 mb-5 brutalist-shadow-sm relative">
+            <span class="absolute -top-3.5 left-3 bg-[#FF90E8] text-white border-2 border-black font-mono text-[10px] px-2 py-0.5 font-black uppercase rounded-none select-none">
+              FUEL CONVERTER
+            </span>
+            <div class="flex flex-col sm:flex-row items-center gap-4 mt-1 justify-between">
+              <div class="flex items-center gap-3">
+                <button onclick="drinkCoffee()" class="w-12 h-12 bg-[#FF6B00] text-black brutalist-border font-black flex items-center justify-center hover:scale-105 active:scale-95 transition-transform" title="Drink coffee">
+                  ☕️
+                </button>
+                <div>
+                  <p class="font-display text-sm font-black uppercase">
+                    CAFFEINE LEVEL: <span id="coffee-level-text">3</span> / 12
+                  </p>
+                  <p id="coffee-status-text" class="font-mono text-[10px] text-stone-600 uppercase mt-0.5">
+                    STABLE STATE - READY TO CODE
+                  </p>
+                </div>
+              </div>
+
+              <div id="coffee-progress-bars" class="flex gap-1 bg-black p-1 brutalist-border-sm w-full sm:w-auto overflow-hidden">
+                <!-- Javascript will render 12 blocks here -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Oracle Quotes -->
+          <div class="border-4 border-black bg-[#FFD600] p-4 brutalist-shadow-sm relative overflow-hidden flex flex-col justify-between">
+            <div class="relative z-10">
+              <span class="font-mono text-[10px] font-black uppercase text-stone-800">MAXWELL'S ORACLE SAYINGS //</span>
+              <p id="oracle-quote-text" class="font-display text-base font-extrabold text-black uppercase mt-2 leading-snug tracking-wider">
+                "THICK BORDERS BRING MEANING TO A MEANINGLESS WEB."
+              </p>
+            </div>
+            <div class="flex justify-between items-center mt-4 border-t-2 border-black pt-2 relative z-10">
+              <span class="font-mono text-[9px] font-bold text-stone-700">STABLE CORE</span>
+              <button onclick="rotateOracle()" class="bg-black text-[#FFD600] hover:bg-white hover:text-black font-mono text-[10px] font-black px-2 py-1 brutalist-border-sm cursor-pointer transition-colors">
+                🔄 ROTATE IDEA
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5 pt-3 border-t-2 border-black/10 flex justify-between items-center text-[10px] font-mono text-stone-500 uppercase">
+          <span>STATIC STANDALONE SANDBOX</span>
+          <span>STABLE OFFLINE ✦</span>
+        </div>
+      </div>
+
+      <!-- STICKER LAB -->
+      <div class="w-full flex flex-col h-full bg-[#FAFAFA] brutalist-border p-6 brutalist-shadow bg-grid">
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b-4 border-black pb-4 mb-4">
+          <div>
+            <h3 class="font-display text-xl font-black uppercase text-black flex items-center gap-2">
+              🎨 STICKER LAB
+            </h3>
+            <p class="font-sans text-xs text-stone-600 uppercase mt-1">
+              Custom static decals. Create and place them on the workspace.
+            </p>
+          </div>
+          <form onsubmit="createSticker(event)" class="flex gap-2 w-full sm:w-auto">
+            <input id="sticker-input-text" type="text" maxlength="15" placeholder="TEXT..." class="w-full sm:w-28 brutalist-border-sm bg-white px-2 py-1 font-mono text-xs focus:bg-[#FFD600] outline-none uppercase" required />
+            <select id="sticker-input-icon" class="brutalist-border-sm bg-white px-2 py-1 font-mono text-xs focus:bg-[#00FF00] outline-none">
+              <option value="🔥">🔥</option>
+              <option value="❤️">❤️</option>
+              <option value="✨">✨</option>
+              <option value="⭐️">⭐️</option>
+              <option value="☕️">☕️</option>
+            </select>
+            <button type="submit" class="bg-black text-white px-3 py-1 font-mono text-xs brutalist-border-sm hover:bg-[#FF6B00] cursor-pointer font-bold uppercase shrink-0">
+              CREATE
+            </button>
+          </form>
+        </div>
+
+        <!-- Sandbox stage box -->
+        <div id="sticker-drag-zone" class="flex-1 relative w-full h-[280px] bg-white brutalist-border-sm overflow-hidden pattern-dots">
+          <div class="absolute inset-0 flex items-center justify-center opacity-10 select-none pointer-events-none">
+            <span class="font-display text-4xl font-black uppercase tracking-widest text-center">LABEL AREA</span>
+          </div>
+          
+          <!-- Sample Stamp stickers rendered by Javascript -->
+        </div>
+
+        <div class="flex justify-between items-center mt-3 text-[10px] font-mono text-stone-500 uppercase">
+          <span>Stickers on Board: <span id="sticker-count-badge">5</span></span>
+          <span>Click to randomized offset ✦</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- PROJECT WORKCASE DIRECTORY -->
+    <section class="w-full flex flex-col bg-[#FAFAFA] brutalist-border p-6 brutalist-shadow bg-grid relative rounded-none">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b-4 border-black pb-4 mb-6">
+        <div>
+          <h3 class="font-display text-xl md:text-2xl font-black uppercase text-black flex items-center gap-2">
+            📂 ENGINEERED WORKS
+          </h3>
+          <p class="font-sans text-xs text-stone-600 uppercase mt-1">
+            Browse open source code bases and experimental software solutions.
+          </p>
+        </div>
+
+        <!-- Tag Filters -->
+        <div id="project-filters-row" class="flex flex-wrap gap-1.5 max-w-full">
+          <button onclick="filterSelectedTag('ALL')" id="filter-btn-all" class="px-2.5 py-1 font-mono text-xs font-bold uppercase brutalist-border-sm bg-black text-white cursor-pointer hover:bg-stone-800">ALL</button>
+          <button onclick="filterSelectedTag('React')" class="px-2.5 py-1 font-mono text-xs font-bold uppercase brutalist-border-sm bg-white text-black cursor-pointer hover:bg-[#FFD600]">React</button>
+          <button onclick="filterSelectedTag('TypeScript')" class="px-2.5 py-1 font-mono text-xs font-bold uppercase brutalist-border-sm bg-white text-black cursor-pointer hover:bg-[#FF90E8]">TypeScript</button>
+          <button onclick="filterSelectedTag('WebAudio')" class="px-2.5 py-1 font-mono text-xs font-bold uppercase brutalist-border-sm bg-white text-black cursor-pointer hover:bg-[#A2D2FF]">WebAudio</button>
+        </div>
+      </div>
+
+      <!-- Projects Grid list -->
+      <div id="projects-grid-container" class="grid grid-cols-1 md:grid-cols-2 gap-6 pb-2">
+        <!-- Rendered by JavaScript -->
+      </div>
+    </section>
+
+    <!-- CAPABILITIES DIRECTORY -->
+    <section class="w-full flex flex-col bg-white brutalist-border p-6 brutalist-shadow bg-grid relative overflow-hidden">
+      <div class="border-b-4 border-black pb-4 mb-6">
+        <h3 class="font-display text-xl font-black uppercase text-black flex items-center gap-2">
+          ⚙️ CAPABILITIES DIRECTORY
+        </h3>
+        <p class="font-sans text-xs text-stone-600 uppercase mt-1">
+          Ledger tracking structural fluency standards and core tooling proficiencies.
+        </p>
+      </div>
+
+      <div id="skills-grid-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Renders automatically via JavaScript -->
+      </div>
+    </section>
+
+    <!-- GUESTBOOK & CONTACT FORM CO-GRID -->
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch mb-6">
+      
+      <!-- GUESTBOOK -->
+      <div class="w-full h-full bg-[#FAFAFA] brutalist-border p-6 brutalist-shadow bg-grid flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-start border-b-4 border-black pb-4 mb-5">
+            <div>
+              <h3 class="font-display text-xl font-black uppercase text-black">
+                📝 AUTHENTIC GUESTBOOK
+              </h3>
+              <p class="font-sans text-xs text-stone-600 uppercase mt-1">
+                Leave a mark on the wall. Persisted in your local browser storage.
+              </p>
+            </div>
+            <button onclick="resetGuestbook()" class="text-[10px] bg-stone-200 hover:bg-red-200 border-2 border-black font-mono font-bold px-2 py-1 uppercase cursor-pointer">
+              RESET
+            </button>
+          </div>
+
+          <form onsubmit="submitGuestbook(event)" class="mb-6 space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div class="sm:col-span-2">
+                <label class="block text-[10px] font-mono font-black uppercase mb-1">PSEUDONYM handle</label>
+                <input id="guest-input-name" type="text" placeholder="YOUR PSEUDONYM" maxlength="25" class="w-full brutalist-border bg-white px-3 py-2 font-mono text-xs focus:bg-[#FFD600] outline-none uppercase" required />
+              </div>
+              <div>
+                <label class="block text-[10px] font-mono font-black uppercase mb-1">STAMP EMOJI</label>
+                <select id="guest-input-emoji" class="w-full brutalist-border bg-white p-[8px] font-mono text-xs focus:bg-[#00FF00] outline-none">
+                  <option value="🔥">🔥 FLAME</option>
+                  <option value="❤️">❤️ HEART</option>
+                  <option value="⚡️">⚡️ LIGHTNING</option>
+                  <option value="💀">💀 SKULL</option>
+                  <option value="☕️">☕️ COFFEE</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-[10px] font-mono font-black uppercase mb-1">YOUR MESSAGE TO WRITE</label>
+              <textarea id="guest-input-message" placeholder="WHAT IS YOUR IMPRESSION?" maxlength="140" rows="2" class="w-full brutalist-border bg-white p-3 font-mono text-xs focus:bg-[#A2D2FF] outline-none uppercase resize-none" required></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-black text-white hover:bg-[#FF6B00] hover:text-black py-2.5 font-display text-sm font-black tracking-wider uppercase brutalist-border transition-all flex items-center justify-center gap-2 cursor-pointer">
+              STAMP TO THE BOARD
+            </button>
+          </form>
+        </div>
+
+        <div id="guestbook-list-container" class="space-y-4 max-h-[280px] overflow-y-auto pr-2 pb-2">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+
+      <!-- CONTACT TRANSMISSION -->
+      <div class="w-full h-full bg-[#FAFAFA] brutalist-border p-6 brutalist-shadow bg-grid flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-start border-b-4 border-black pb-4 mb-5">
+            <div>
+              <h3 class="font-display text-xl font-black uppercase text-black">
+                📡 TRANSMISSION PORT
+              </h3>
+              <p class="font-sans text-xs text-stone-600 uppercase mt-1">
+                Establish direct interactive contact payload correspondence with me.
+              </p>
+            </div>
+          </div>
+
+          <div id="transmission-form-view">
+            <form onsubmit="submitTransmission(event)" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-[10px] font-mono font-black uppercase mb-1">SENDER IDENTIFIER</label>
+                  <input id="trans-input-name" type="text" placeholder="NAME / BUSINESS" class="w-full brutalist-border bg-white px-3 py-2 font-mono text-xs focus:bg-[#FFD600] outline-none uppercase" required />
+                </div>
+                <div>
+                  <label class="block text-[10px] font-mono font-black uppercase mb-1">CORRESPONDING ADDR</label>
+                  <input id="trans-input-email" type="email" placeholder="SENDER@DOMAIN.COM" class="w-full brutalist-border bg-white px-3 py-2 font-mono text-xs focus:bg-[#00FF00] outline-none" required />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-[10px] font-mono font-black uppercase mb-1">PAYLOAD STATEMENT</label>
+                <textarea id="trans-input-msg" placeholder="WRITE SECURE DATA TRANSACTION TO MAX..." rows="3" class="w-full brutalist-border bg-white p-3 font-mono text-xs focus:bg-[#FF90E8] outline-none resize-none" required></textarea>
+              </div>
+
+              <button type="submit" class="w-full bg-black text-white hover:bg-[#FF6B00] hover:text-black py-2.5 font-display text-sm font-black tracking-widest uppercase brutalist-border transition-all cursor-pointer">
+                INITIATE PUSH PROTOCOL
+              </button>
+            </form>
+          </div>
+
+          <!-- Success View (hidden by default) -->
+          <div id="transmission-success-view" class="hidden space-y-4">
+            <div class="bg-[#00FF00] text-black brutalist-border p-4 brutalist-shadow-sm">
+              <h4 class="font-display font-black text-sm uppercase">TRANSMISSION SECURED!</h4>
+              <p class="font-mono text-xs mt-1 text-stone-850">
+                Your correspondence package was packaged, compiled and sealed in the standard browser state cache file.
+              </p>
+            </div>
+            <button onclick="resetTransmissionForm()" class="bg-black text-white px-4 py-2 font-mono text-xs brutalist-border-sm hover:bg-[#FFD600] hover:text-black cursor-pointer uppercase font-bold active:translate-y-0.5">
+              COMPILE ANOTHER PAYLOAD
+            </button>
+          </div>
+        </div>
+
+        <div id="transmission-console-logs" class="hidden mt-5 brutalist-border bg-stone-950 text-[#00FF66] p-3 font-mono text-[10px] space-y-1 max-h-[110px] overflow-y-auto">
+          <!-- Live terminal status codes printed here -->
+        </div>
+      </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t-4 border-black pt-6 pb-12 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-mono select-none">
+      <div class="flex items-center gap-2">
+        📚 <span class="font-black uppercase">CRAFTED STANDALONE PORTABLE RUNTIME CODE. 2026.</span>
+      </div>
+      <div class="text-stone-600 text-center md:text-right uppercase">
+        <span>PERSISTENCE: LOCALSTORAGE WRAPPER ✦ NO ADS</span>
+        <br />
+        <span class="text-[9px] mt-1 inline-block text-stone-500">APACHE-2.0 LICENSE PROTOCOLS</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- CONTROL DECK WINDOW MODAL (HIDDEN BY DEFAULT) -->
+  <div id="control-deck-window" class="fixed inset-0 bg-black/65 z-50 flex items-center justify-center p-4 backdrop-blur-xs hidden">
+    <div class="w-full max-w-2xl bg-white brutalist-border-md brutalist-shadow-lg text-black overflow-hidden flex flex-col max-h-[90vh]">
+      
+      <!-- Title standard -->
+      <div class="p-4 border-b-4 border-black bg-[#00FF00] font-display text-lg tracking-tighter uppercase flex justify-between items-center">
+        <span>⚙️ STANDALONE CONTROL DECK</span>
+        <button onclick="toggleEditor()" class="w-8 h-8 bg-black text-white hover:bg-[#FF6B00] hover:text-black border-2 border-black font-black flex items-center justify-center cursor-pointer">
+          ×
+        </button>
+      </div>
+
+      <!-- Tab Buttons menu -->
+      <div class="flex border-b-4 border-black bg-stone-100 font-display text-xs select-none">
+        <button onclick="switchTab('profile')" id="tab-btn-profile" class="flex-1 py-3 text-center font-bold tracking-tight uppercase border-r-4 border-black bg-[#FFD600] text-black">
+          1. STATS BIO
+        </button>
+        <button onclick="switchTab('projects')" id="tab-btn-projects" class="flex-1 py-3 text-center font-bold tracking-tight uppercase border-r-4 border-black bg-transparent text-stone-650">
+          2. WORKCASES
+        </button>
+        <button onclick="switchTab('skills')" id="tab-btn-skills" class="flex-1 py-3 text-center font-bold tracking-tight uppercase bg-transparent text-stone-650">
+          3. CAPABILITIES
+        </button>
+      </div>
+
+      <!-- Scroll container content -->
+      <div class="p-6 overflow-y-auto flex-1 space-y-6">
+        
+        <!-- Profile editor tab screen -->
+        <div id="tab-view-profile" class="space-y-4">
+          <span class="font-mono text-[10px] font-black uppercase text-stone-500 block">IDENTITY ATTRIBUTES //</span>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-[11px] font-mono font-black uppercase mb-1">OPERATOR NAME</label>
+              <input id="edit-profile-name" type="text" class="w-full brutalist-border bg-stone-50 p-2 font-mono text-xs uppercase" />
+            </div>
+            <div>
+              <label class="block text-[11px] font-mono font-black uppercase mb-1">WORK CAPACITY TITLE</label>
+              <input id="edit-profile-role" type="text" class="w-full brutalist-border bg-stone-50 p-2 font-mono text-xs uppercase" />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-[11px] font-mono font-black uppercase mb-1">PORTRAIT/AVATAR CDN URL</label>
+            <input id="edit-profile-avatar" type="text" class="w-full brutalist-border bg-stone-50 p-2 font-mono text-xs" />
+          </div>
+
+          <div>
+            <label class="block text-[11px] font-mono font-black uppercase mb-1">STATION STATEMENT BRIEF (BIO)</label>
+            <textarea id="edit-profile-bio" rows="3" class="w-full brutalist-border bg-stone-50 p-3 font-sans text-xs uppercase"></textarea>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-[11px] font-mono font-black uppercase mb-1">OPERATIVE ZONE LOCATION</label>
+              <input id="edit-profile-loc" type="text" class="w-full brutalist-border bg-stone-50 p-2 font-mono text-xs uppercase" />
+            </div>
+            <div>
+              <label class="block text-[11px] font-mono font-black uppercase mb-1">COMMONS TAGS (COMMA SEPR)</label>
+              <input id="edit-profile-tags" type="text" class="w-full brutalist-border bg-stone-50 p-2 font-mono text-xs uppercase" />
+            </div>
+          </div>
+
+          <button onclick="saveProfile()" class="w-full bg-black text-white hover:bg-[#FFD600] hover:text-black font-display py-2.5 text-xs font-black tracking-widest uppercase brutalist-border cursor-pointer transition-colors">
+            SAVE LOCAL IDENTITY DETAILS
+          </button>
+        </div>
+
+        <!-- Projects list form tab screen -->
+        <div id="tab-view-projects" class="space-y-6 hidden">
+          <div class="border-4 border-black bg-stone-50 p-4 relative space-y-4">
+            <span class="absolute -top-3.5 left-3 bg-[#FF90E8] text-white border-2 border-black font-mono text-[10px] px-2 py-0.5 font-black uppercase rounded-none select-none">
+              ADD CUSTOM SOURCE PROJECT //
+            </span>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div>
+                <label class="block text-[10px] font-mono font-black uppercase mb-0.5">PROJECT TITLE</label>
+                <input id="new-p-title" type="text" placeholder="E.G. ZEAL ARCHIVE" class="w-full brutalist-border-sm bg-white p-1.5 font-mono text-xs uppercase" />
+              </div>
+              <div>
+                <label class="block text-[10px] font-mono font-black uppercase mb-0.5">ACCENT FRAME</label>
+                <select id="new-p-color" class="w-full brutalist-border-sm bg-white p-1.5 font-mono text-xs focus:bg-[#FFD600]">
+                  <option value="yellow">YELLOW Accent</option>
+                  <option value="pink">PINK Accent</option>
+                  <option value="green">GREEN Accent</option>
+                  <option value="blue">BLUE Accent</option>
+                  <option value="purple">PURPLE Accent</option>
+                  <option value="orange">ORANGE Accent</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-[10px] font-mono font-black uppercase mb-0.5">SYNOPSIS STATEMENT</label>
+              <input id="new-p-desc" type="text" placeholder="SHORT SUMMARY STATEMENT ABOUT DESIGN" class="w-full brutalist-border-sm bg-white p-1.5 font-mono text-xs" />
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-[10px] font-mono font-black uppercase mb-0.5">LANG TAGS (COMMA DISPATCH)</label>
+                <input id="new-p-tags" type="text" placeholder="REACT, TYPESCRIPT, ELECTRON" class="w-full brutalist-border-sm bg-white p-1.5 font-mono text-xs uppercase" />
+              </div>
+              <div>
+                <label class="block text-[10px] font-mono font-black uppercase mb-0.5">GIT TARGET URL</label>
+                <input id="new-p-link" type="text" value="https://github.com" class="w-full brutalist-border-sm bg-white p-1.5 font-mono text-xs" />
+              </div>
+            </div>
+
+            <button onclick="addProjectCustom()" type="button" class="w-full bg-black text-white hover:bg-[#00FF00] hover:text-black py-2.5 font-display text-xs font-black tracking-widest uppercase brutalist-border cursor-pointer">
+              + ARREST AND COMPILE PROJECT
+            </button>
+          </div>
+
+          <div class="space-y-2">
+            <span class="font-mono text-[10px] font-black uppercase text-stone-500 block">EXISTING FILE SYSTEMS //</span>
+            <div id="editor-projects-list" class="space-y-2">
+              <!-- Rendered list of individual projects to delete -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Capability form tab screen -->
+        <div id="tab-view-skills" class="space-y-4 hidden">
+          <span class="font-mono text-[10px] font-black uppercase text-stone-500 block">TOOL FLUENCY METRICS //</span>
+          <div id="editor-skills-list" class="space-y-4">
+            <!-- Rendered skill sliders list -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer action console -->
+      <div class="p-4 border-t-4 border-black bg-stone-50 flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-3">
+        <button onclick="clearAllDataDefaults()" class="bg-[#FAFAFA] text-black hover:bg-red-200 hover:text-red-700 py-2.5 px-4 font-mono text-[10px] font-black uppercase brutalist-border-sm cursor-pointer">
+          🚨 REVERT SYSTEM SETTINGS DEFAULT
+        </button>
+        <button onclick="toggleEditor()" class="bg-black text-white hover:bg-[#00FF00] hover:text-black py-2.5 px-6 font-display text-xs font-black tracking-widest uppercase brutalist-border cursor-pointer">
+          CLOSE CONTROL DECK
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- STAMP DETAIL DRAWER NODE OVERLAY (MODAL) -->
+  <div id="project-detail-window" class="fixed inset-0 bg-black/65 z-50 flex items-center justify-center p-4 backdrop-blur-xs hidden">
+    <div class="w-full max-w-xl bg-[#FAFAFA] brutalist-border-md brutalist-shadow-lg text-black overflow-hidden relative">
+      <div id="detail-window-header" class="p-4 border-b-4 border-black flex justify-between items-center bg-[#FF90E8]">
+        <span id="detail-window-title" class="font-display text-base tracking-widest uppercase text-black">DOCK ARCHIVE</span>
+        <button onclick="closeProjectModal()" class="w-8 h-8 bg-black text-white hover:bg-[#FF6B00] hover:text-black border-2 border-black font-black flex items-center justify-center cursor-pointer">
+          ×
+        </button>
+      </div>
+      
+      <div class="p-6 space-y-6">
+        <div>
+          <span class="font-mono text-[10px] font-black uppercase text-stone-500 block mb-1">FUNCTIONAL SPECIFICATION //</span>
+          <p id="detail-window-desc" class="font-sans text-sm text-stone-850 leading-relaxed uppercase">
+            DESC...
+          </p>
+        </div>
+
+        <div class="grid grid-cols-3 gap-3 border-4 border-black bg-white p-3 brutalist-shadow-sm">
+          <div class="flex flex-col items-center justify-center text-center p-1.5 border-r border-black/15">
+            <span class="font-mono text-[9px] font-black uppercase text-stone-500">STARS</span>
+            <span id="detail-metric-1" class="font-display text-sm font-black text-black mt-1 uppercase">1.2K</span>
+          </div>
+          <div class="flex flex-col items-center justify-center text-center p-1.5 border-r border-black/15">
+            <span class="font-mono text-[9px] font-black uppercase text-stone-500">RATING</span>
+            <span id="detail-metric-2" class="font-display text-sm font-black text-black mt-1 uppercase">9.8/10</span>
+          </div>
+          <div class="flex flex-col items-center justify-center text-center p-1.5">
+            <span class="font-mono text-[9px] font-black uppercase text-stone-500">PLATFORM</span>
+            <span class="font-display text-sm font-black text-black mt-1 uppercase">PORTABLE</span>
+          </div>
+        </div>
+
+        <div>
+          <span class="font-mono text-[10px] font-black uppercase text-stone-500 block mb-2">CONSTRUCTED ASSETS //</span>
+          <div id="detail-window-tags-container" class="flex flex-wrap gap-1.5">
+            <!-- Tags rendered -->
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-3 pt-4 border-t-2 border-black/15">
+          <a id="detail-window-git" href="#" target="_blank" class="flex-1 bg-black text-white hover:bg-[#00FF00] hover:text-black py-2.5 font-display text-xs font-black tracking-widest text-center uppercase brutalist-border flex items-center justify-center gap-2">
+            PULL GIT SOURCE
+          </a>
+          <button onclick="alert('PREVIEW SECURED: Sandbox active locally! ⬤')" class="flex-1 bg-white text-black hover:bg-[#FF6B00] hover:text-black py-2.5 font-display text-xs font-black tracking-widest text-center uppercase brutalist-border flex items-center justify-center gap-2 border-black">
+            LAUNCH PREVIEW
+          </button>
+        </div>
+      </div>
+      <div class="bg-black text-[9px] font-mono text-stone-400 p-2 text-center uppercase tracking-widest">
+        SYSTEM DOCK ACTIVE // SECURE FILE STATE
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LIVE OFFLINE ENGINE -->
+  <script type="text/javascript">
+    
+    // Original Static JSON datasets
+    const DEFAULT_USER_INFO = {
+      name: "MAX DEVEREUX",
+      role: "CREATIVE SITE WEB ARCHITECT",
+      bio: "Crafting extremely loud interfaces, solid backend architectures, and high-contrast digital playgrounds. I hate boring grids, standard layouts, and bland colors. Let's build the future with giant thick borders.",
+      avatar: "./src/assets/images/avatar_male_hoodie_1781199576411.jpg",
+      location: "UTC+7 / TOKYO-JAKARTA TIMEZONE",
+      tags: ["NEOBRUTALISM", "HTML_PORTABLE", "TAILWIND_V4", "NO_BORING_DESIGN"]
+    };
+
+    const DEFAULT_PROJECTS = [
+      {
+        id: "anarchy-engine",
+        title: "ANARCHY ENGINE v2.0",
+        description: "High-performance shader simulator that bypasses traditional layout rules for full pixel control.",
+        tags: ["React", "TypeScript", "WebGL"],
+        color: "pink",
+        link: "https://github.com",
+        stats: [{ label: "Stars", value: "3.4k" }, { label: "Performance", value: "60fps" }]
+      },
+      {
+        id: "neo-dock",
+        title: "NEO-DOCK INTERACTIVE",
+        description: "Minimalist desk companion equipped with dynamic clocks, widgets, & retro synthesizers.",
+        tags: ["TypeScript", "LocalStorage", "WebAudio"],
+        color: "yellow",
+        link: "https://github.com",
+        stats: [{ label: "Users", value: "12,900" }, { label: "Weight", value: "48KB" }]
+      },
+      {
+        id: "pixel-chaos",
+        title: "PIXEL CHAOS STAMP",
+        description: "Collaborative, real-time pixel board allowing multiple visitors to stamp customized vector stickers.",
+        tags: ["TypeScript", "Bento Grid", "SASS"],
+        color: "green",
+        link: "https://github.com",
+        stats: [{ label: "Stickers", value: "54,201" }, { label: "Rating", value: "9.9/10" }]
+      }
+    ];
+
+    const DEFAULT_SKILLS = [
+      { name: "React / Vite Architecture", category: "frontend", level: 9, color: "bg-[#FFD600]", description: "Bespoke rendering, hook optimization, custom client states." },
+      { name: "Tailwind CSS v4 Utility", category: "frontend", level: 10, color: "bg-[#A2D2FF]", description: "Utterly clean utility setups, custom CSS variables, pure components." },
+      { name: "Vanilla / Web Standard Core", category: "design", level: 9, color: "bg-[#FF90E8]", description: "Optimized HTML canvas modules, raw DOM parsing, offline support." }
+    ];
+
+    const DEFAULT_GUESTBOOK = [
+      { id: "g-1", name: "ALEX CHEN", message: "This pure standalone HTML version is incredibly robust! Opens instantly on disk. Legendary craft.", emoji: "⚡️", timestamp: "2026-06-11", color: "bg-[#FFD600]" },
+      { id: "g-2", name: "OS_OPERATOR", message: "Love the LocalStorage persistence and caffeine converter widget. Totally authentic.", emoji: "☕️", timestamp: "2026-06-11", color: "bg-[#FF90E8]" }
+    ];
+
+    const QUOTES = [
+      "COFFEE IN, BUGS OUT. COFFEE OUT, SYSTEM OFF.",
+      "MY CODE WORKS SO WELL EVEN THE BROWSER IS SURPRISED.",
+      "SHIP IT TODAY, STRUGGLE TOMORROW. CARPE DIEM.",
+      "THE ONLY REAL DATA BASE IS LOCAL STORAGE RE-HYDRATED.",
+      "THICK BORDERS BRING MEANING TO A MEANINGLESS WEB."
+    ];
+
+    // Local state managers
+    let userInfo = {};
+    let projectsList = [];
+    let skillsList = [];
+    let guestbookEntries = [];
+    let selectedSkillTab = "profile";
+    let activeFilterTag = "ALL";
+    let caffeineLevel = 3;
+
+    // Initialize State from LocalStorage
+    function initializeSystem() {
+      userInfo = JSON.parse(localStorage.getItem('standalone-user-info') || JSON.stringify(DEFAULT_USER_INFO));
+      projectsList = JSON.parse(localStorage.getItem('standalone-projects') || JSON.stringify(DEFAULT_PROJECTS));
+      skillsList = JSON.parse(localStorage.getItem('standalone-skills') || JSON.stringify(DEFAULT_SKILLS));
+      guestbookEntries = JSON.parse(localStorage.getItem('standalone-guestbook') || JSON.stringify(DEFAULT_GUESTBOOK));
+
+      renderProfile();
+      renderCaffeineDisplay();
+      renderProjects();
+      renderSkills();
+      renderGuestbook();
+      renderStickers();
+    }
+
+    // Tick clocks
+    setInterval(() => {
+      const now = new Date();
+      document.getElementById('local-clock-display').innerText = now.toLocaleTimeString();
+    }, 1000);
+
+    // Profile updates
+    function renderProfile() {
+      document.getElementById('header-logo').innerText = `${userInfo.name.replace(/\s+/g, '.') || 'MAXWELL'}.OS // 2026`;
+      document.getElementById('hero-name-badge').innerText = userInfo.name;
+      document.getElementById('hero-role-badge').innerText = userInfo.role;
+      document.getElementById('hero-bio-badge').innerText = userInfo.bio;
+      document.getElementById('hero-location-badge').innerText = userInfo.location;
+      document.getElementById('hero-avatar-img').src = userInfo.avatar;
+
+      // Render bio tag bubbles
+      const container = document.getElementById('hero-tags-container');
+      container.innerHTML = '';
+      userInfo.tags.forEach(tag => {
+        const span = document.createElement('span');
+        span.className = "px-2.5 py-1 bg-white brutalist-border-sm text-[10px] sm:text-xs font-mono font-black text-black select-none uppercase hover:bg-[#A2D2FF]";
+        span.innerText = `#${tag}`;
+        container.appendChild(span);
+      });
+
+      // Populate Control values
+      document.getElementById('edit-profile-name').value = userInfo.name;
+      document.getElementById('edit-profile-role').value = userInfo.role;
+      document.getElementById('edit-profile-avatar').value = userInfo.avatar;
+      document.getElementById('edit-profile-bio').value = userInfo.bio;
+      document.getElementById('edit-profile-loc').value = userInfo.location;
+      document.getElementById('edit-profile-tags').value = userInfo.tags.join(', ');
+    }
+
+    function saveProfile() {
+      userInfo.name = document.getElementById('edit-profile-name').value.toUpperCase();
+      userInfo.role = document.getElementById('edit-profile-role').value.toUpperCase();
+      userInfo.bio = document.getElementById('edit-profile-bio').value;
+      userInfo.avatar = document.getElementById('edit-profile-avatar').value;
+      userInfo.location = document.getElementById('edit-profile-loc').value.toUpperCase();
+      userInfo.tags = document.getElementById('edit-profile-tags').value.split(',').map(t => t.trim()).filter(t => t.length > 0);
+
+      localStorage.setItem('standalone-user-info', JSON.stringify(userInfo));
+      renderProfile();
+      alert("IDENTITY DETAILS SERIALIZED LOCALLY!");
+    }
+
+    // Caffeine metrics
+    function drinkCoffee() {
+      if (caffeineLevel >= 12) {
+        caffeineLevel = 1;
+      } else {
+        caffeineLevel++;
+      }
+      renderCaffeineDisplay();
+    }
+
+    function renderCaffeineDisplay() {
+      document.getElementById('coffee-level-text').innerText = caffeineLevel;
+      const status = document.getElementById('coffee-status-text');
+      if (caffeineLevel <= 3) status.innerText = "CALM SEED - READY FOR INPUT";
+      else if (caffeineLevel <= 6) status.innerText = "STABLE DEPLOYMENT - TS WORKSPACE ACHIEVED";
+      else if (caffeineLevel <= 9) status.innerText = "MOMENTUM HIGH - COMPILING COMPLEX SEEDS";
+      else status.innerText = "WARNING: REACHING COMPLETE SYNAPSE SATURATION";
+
+      const barContainer = document.getElementById('coffee-progress-bars');
+      barContainer.innerHTML = '';
+      for (let i = 0; i < 12; i++) {
+        const brick = document.createElement('div');
+        brick.className = "h-6 w-3 border-r border-black/30 transition-colors";
+        if (i < caffeineLevel) {
+          brick.style.backgroundColor = caffeineLevel <= 3 ? '#A2D2FF' : (caffeineLevel <= 6 ? '#00FF00' : (caffeineLevel <= 9 ? '#FFD600' : '#FF90E8'));
+        } else {
+          brick.style.backgroundColor = '#292524';
+        }
+        barContainer.appendChild(brick);
+      }
+    }
+
+    // Oracle rotating
+    function rotateOracle() {
+      const p = document.getElementById('oracle-quote-text');
+      const filtered = QUOTES.filter(q => q !== p.innerText);
+      const randomQuote = filtered[Math.floor(Math.random() * filtered.length)];
+      p.innerText = `"${randomQuote}"`;
+    }
+
+    // Copy coordinate info
+    function copyLocation() {
+      navigator.clipboard.writeText(userInfo.location);
+      alert("TIMEZONE IDENTIFIED IN YOUR clipboard BUFFER!");
+    }
+
+    // Stickers Sandbox
+    const sampleStickersDefault = [
+      { id: "st-1", text: "DRAG STACK", icon: "🔥", color: "bg-[#FFD600]", left: 15, top: 20 },
+      { id: "st-2", text: "CSS IS GOLD", icon: "❤️", color: "bg-[#FF90E8]", left: 65, top: 15 },
+      { id: "st-3", text: "NO BLURS", icon: "⚡️", color: "bg-[#00FF00]", left: 45, top: 60 }
+    ];
+
+    let customStickersList = [];
+
+    function renderStickers() {
+      const zone = document.getElementById('sticker-drag-zone');
+      // clear any rendered stamps (preserve background layout text label)
+      const existingStickers = zone.querySelectorAll('.sticker-stamp-entity');
+      existingStickers.forEach(e => e.remove());
+
+      const allToRender = [...sampleStickersDefault, ...customStickersList];
+      document.getElementById('sticker-count-badge').innerText = allToRender.length;
+
+      allToRender.forEach((st, idx) => {
+        const div = document.createElement('div');
+        div.className = `sticker-stamp-entity absolute cursor-pointer active:cursor-grabbing px-3 py-1.5 brutalist-border-sm ${st.color} brutalist-shadow-sm flex items-center gap-2 select-none select-none`;
+        div.style.left = `${st.left}%`;
+        div.style.top = `${st.top}%`;
+        div.style.transform = `rotate(${(idx * 12 - 15) % 20}deg)`;
+
+        // Simple coordinate bounce click displacement to mock organic coordinates quickly in static container
+        div.onclick = () => {
+          st.left = Math.floor(Math.random() * 70) + 5;
+          st.top = Math.floor(Math.random() * 60) + 10;
+          div.style.left = `${st.left}%`;
+          div.style.top = `${st.top}%`;
+        };
+
+        div.innerHTML = `<span class="text-xs select-none">${st.icon}</span><span class="font-mono text-[10px] font-black uppercase whitespace-nowrap">${st.text}</span>`;
+        zone.appendChild(div);
+      });
+    }
+
+    function createSticker(event) {
+      event.preventDefault();
+      const txt = document.getElementById('sticker-input-text').value.trim().toUpperCase();
+      const icon = document.getElementById('sticker-input-icon').value;
+      if (!txt) return;
+
+      const colors = ["bg-[#FFD600]", "bg-[#FF90E8]", "bg-[#00FF00]", "bg-[#A2D2FF]", "bg-[#FF6B00]", "bg-[#B026FF]"];
+      const sticker = {
+        id: `c-st-${Date.now()}`,
+        text: txt,
+        icon: icon,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        left: Math.floor(Math.random() * 60) + 15,
+        top: Math.floor(Math.random() * 55) + 15
+      };
+
+      customStickersList.push(sticker);
+      document.getElementById('sticker-input-text').value = '';
+      renderStickers();
+    }
+
+    // Projects Grid Listing
+    function renderProjects() {
+      const container = document.getElementById('projects-grid-container');
+      container.innerHTML = '';
+
+      const filtered = activeFilterTag === 'ALL' 
+        ? projectsList 
+        : projectsList.filter(p => p.tags.includes(activeFilterTag));
+
+      filtered.forEach(p => {
+        const accentClass = p.color === 'yellow' ? 'bg-[#FFD600]' : (p.color === 'pink' ? 'bg-[#FF90E8]' : (p.color === 'green' ? 'bg-[#00FF00]' : (p.color === 'blue' ? 'bg-[#A2D2FF]' : 'bg-[#FF6B00]')));
+        
+        const card = document.createElement('div');
+        card.className = "brutalist-border bg-white brutalist-shadow text-black hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] transition-all flex flex-col justify-between group overflow-hidden relative";
+        
+        card.innerHTML = `
+          <div class="h-3 border-b-4 border-black ${accentClass}"></div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex justify-between items-start gap-2 mb-2">
+                <h4 class="font-display text-2xl font-black uppercase tracking-tight group-hover:text-[#FF6B00] transition-colors">${p.title}</h4>
+                <span class="shrink-0 p-1 bg-black text-white text-[9px] font-mono font-bold uppercase select-none">#0${p.id.slice(0,2)}</span>
+              </div>
+              <p class="font-mono text-xs text-stone-700 leading-relaxed mb-4">${p.description}</p>
+            </div>
+            <div>
+              <div class="flex flex-wrap gap-1 mb-5">
+                ${p.tags.map(t => `<span class="px-2 py-0.5 font-mono text-[10px] font-bold uppercase bg-stone-100 brutalist-border-sm text-stone-850">${t}</span>`).join('')}
+              </div>
+              <div class="flex justify-between items-center border-t-2 border-black/15 pt-3">
+                <button onclick="openProjectModal('${p.id}')" class="text-xs font-mono font-black uppercase hover:text-[#FF6B00] cursor-pointer">
+                  EXPLORE ARCHIVE →
+                </button>
+                <a href="${p.link}" target="_blank" class="p-1 px-2 border-2 border-black bg-stone-50 hover:bg-[#FFD600] text-xs font-mono font-bold">
+                  GITHUB
+                </a>
+              </div>
+            </div>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+
+      // Maintain Control project list as well
+      const listContainer = document.getElementById('editor-projects-list');
+      listContainer.innerHTML = '';
+      projectsList.forEach(p => {
+        const div = document.createElement('div');
+        div.className = "flex justify-between items-center bg-stone-50 brutalist-border-sm p-3";
+        div.innerHTML = `
+          <div>
+            <p class="font-display text-xs font-black uppercase text-black">${p.title}</p>
+            <p class="font-mono text-[10px] text-stone-500">${p.tags.join(' | ').toUpperCase()}</p>
+          </div>
+          <button onclick="deleteProject('${p.id}')" class="p-1 px-2.5 bg-[#FF90E8] hover:bg-black hover:text-white text-black font-mono font-bold text-xs brutalist-border-sm cursor-pointer">
+            DELETE
+          </button>
+        `;
+        listContainer.appendChild(div);
+      });
+    }
+
+    function filterSelectedTag(tag) {
+      activeFilterTag = tag;
+      
+      const buttons = document.querySelectorAll('#project-filters-row button');
+      buttons.forEach(btn => {
+        if (btn.innerText === tag) {
+          btn.className = "px-2.5 py-1 font-mono text-xs font-bold uppercase brutalist-border-sm bg-black text-white cursor-pointer";
+        } else {
+          btn.className = "px-2.5 py-1 font-mono text-xs font-bold uppercase brutalist-border-sm bg-white text-black cursor-pointer hover:bg-[#FFD600]";
+        }
+      });
+
+      renderProjects();
+    }
+
+    function openProjectModal(id) {
+      const p = projectsList.find(proj => proj.id === id);
+      if (!p) return;
+
+      document.getElementById('detail-window-title').innerText = `DOCK PORTFOLIO: ${p.title}`;
+      document.getElementById('detail-window-desc').innerText = p.description;
+      
+      const stars = p.stats && p.stats[0] ? p.stats[0].value : "1.2K";
+      const rating = p.stats && p.stats[1] ? p.stats[1].value : "9.8";
+      document.getElementById('detail-metric-1').innerText = stars;
+      document.getElementById('detail-metric-2').innerText = rating;
+
+      const tagsContainer = document.getElementById('detail-window-tags-container');
+      tagsContainer.innerHTML = '';
+      p.tags.forEach(t => {
+        const s = document.createElement('span');
+        s.className = "px-2.5 py-1 font-mono text-xs font-black uppercase bg-[#FFD600] brutalist-border-sm text-black";
+        s.innerText = t;
+        tagsContainer.appendChild(s);
+      });
+
+      document.getElementById('detail-window-git').href = p.link;
+      document.getElementById('project-detail-window').classList.remove('hidden');
+    }
+
+    function closeProjectModal() {
+      document.getElementById('project-detail-window').classList.add('hidden');
+    }
+
+    function addProjectCustom() {
+      const title = document.getElementById('new-p-title').value.trim();
+      const desc = document.getElementById('new-p-desc').value.trim();
+      const tagsStr = document.getElementById('new-p-tags').value;
+      const color = document.getElementById('new-p-color').value;
+      const link = document.getElementById('new-p-link').value.trim();
+
+      if (!title || !desc) {
+        alert("TITLE AND SYNOPSIS DESCRIPTION ARE REQUIRED!");
+        return;
+      }
+
+      const tagsArray = tagsStr.split(',').map(t => t.trim()).filter(t => t.length > 0);
+
+      const proj = {
+        id: `custom-p-${Date.now()}`,
+        title: title.toUpperCase(),
+        description: desc,
+        tags: tagsArray.length > 0 ? tagsArray : ['React', 'TypeScript'],
+        color: color,
+        link: link || "https://github.com",
+        stats: [{ label: "Stars", value: "1.0k" }, { label: "Rating", value: "9.9" }]
+      };
+
+      projectsList.push(proj);
+      localStorage.setItem('standalone-projects', JSON.stringify(projectsList));
+
+      // Clear fields
+      document.getElementById('new-p-title').value = '';
+      document.getElementById('new-p-desc').value = '';
+      document.getElementById('new-p-tags').value = '';
+
+      renderProjects();
+      alert("SOURCE ARRESTED!");
+    }
+
+    function deleteProject(id) {
+      if (confirm("REMOVE PROJECT FROM STANDALONE FILE?")) {
+        projectsList = projectsList.filter(p => p.id !== id);
+        localStorage.setItem('standalone-projects', JSON.stringify(projectsList));
+        renderProjects();
+      }
+    }
+
+    // Skills Display
+    function renderSkills() {
+      const container = document.getElementById('skills-grid-container');
+      container.innerHTML = '';
+
+      skillsList.forEach((sk, idx) => {
+        const div = document.createElement('div');
+        div.className = "brutalist-border-sm bg-stone-50 p-4 brutalist-shadow-sm flex flex-col justify-between space-y-4";
+        
+        div.innerHTML = `
+          <div>
+            <div class="flex justify-between items-center">
+              <span class="font-display text-sm font-black uppercase text-black">${sk.name}</span>
+              <span class="font-mono text-[9px] p-0.5 px-2 bg-black text-white font-bold select-none uppercase">${sk.category}</span>
+            </div>
+            <p class="font-mono text-[11px] text-stone-700 uppercase mt-2.5 leading-normal">${sk.description}</p>
+          </div>
+          <div class="space-y-1.5 pt-2 border-t border-black/10">
+            <div class="flex justify-between items-center text-[10px] font-mono">
+              <span>FLUENCY RATIO LEVEL</span>
+              <span class="font-bold">${sk.level} / 10</span>
+            </div>
+            <div class="h-5 bg-stone-200 brutalist-border-sm p-0.5 flex">
+              ${Array.from({ length: 10 }).map((_, i) => `
+                <div class="h-full flex-1 border-r border-[#FAF6F0] last:border-0 ${i < sk.level ? sk.color : 'bg-stone-350 bg-stone-300/40'}" />
+              `).join('')}
+            </div>
+          </div>
+        `;
+        container.appendChild(div);
+      });
+
+      // Render sliders in control deck
+      const slidersContainer = document.getElementById('editor-skills-list');
+      slidersContainer.innerHTML = '';
+      skillsList.forEach((sk, idx) => {
+        const div = document.createElement('div');
+        div.className = "bg-stone-50 brutalist-border-sm p-3 flex flex-col sm:flex-row sm:items-center justify-between gap-3";
+        div.innerHTML = `
+          <div>
+            <p class="font-display text-xs font-black uppercase">${sk.name}</p>
+            <p class="font-mono text-[10px] text-stone-500 uppercase">${sk.description}</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <input type="range" min="1" max="10" value="${sk.level}" oninput="updateSkillLevelSlider(${idx}, this.value)" class="bg-black accent-black w-24 sm:w-32" />
+            <span class="font-mono font-bold text-xs w-12 text-center bg-black text-white px-1.5 py-0.5">${sk.level}/10</span>
+          </div>
+        `;
+        slidersContainer.appendChild(div);
+      });
+    }
+
+    function updateSkillLevelSlider(index, value) {
+      skillsList[index].level = parseInt(value);
+      localStorage.setItem('standalone-skills', JSON.stringify(skillsList));
+      renderSkills();
+    }
+
+    // Guestbook Messages
+    function renderGuestbook() {
+      const container = document.getElementById('guestbook-list-container');
+      container.innerHTML = '';
+
+      if (guestbookEntries.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-6 border-2 border-dashed border-black">
+            <p class="font-mono text-xs text-stone-500 uppercase">NO MESSAGE RECORDS FOUND. BE THE FIRST STAMP!</p>
+          </div>
+        `;
+        return;
+      }
+
+      guestbookEntries.forEach((entry, idx) => {
+        const card = document.createElement('div');
+        card.className = `p-4 brutalist-border ${entry.color} brutalist-shadow-sm transition-all relative break-words`;
+        card.style.transform = `rotate(${(idx % 2 === 0 ? -1.5 : 1.5)}deg)`;
+
+        card.innerHTML = `
+          <div class="flex justify-between items-start mb-1 text-xs">
+            <span class="font-display font-black tracking-wider uppercase text-black">${entry.name}</span>
+            <span class="text-lg select-none">${entry.emoji}</span>
+          </div>
+          <p class="font-mono text-xs text-black leading-relaxed">${entry.message}</p>
+          <div class="flex justify-between items-center mt-3 pt-2 border-t border-black/20 text-[10px] font-mono text-stone-700">
+            <span>📅 ${entry.timestamp}</span>
+            <button onclick="deleteGuestEntry('${entry.id}')" class="hover:text-red-600 font-bold">× REMOVE</button>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function submitGuestbook(event) {
+      event.preventDefault();
+      const name = document.getElementById('guest-input-name').value.trim().toUpperCase();
+      const emoji = document.getElementById('guest-input-emoji').value;
+      const message = document.getElementById('guest-input-message').value.trim().toUpperCase();
+
+      if (!name || !message) return;
+
+      const colors = ["bg-[#FFD600]", "bg-[#FF90E8]", "bg-[#00FF00]", "bg-[#A2D2FF]", "bg-[#FF6B00]"];
+      const newEntry = {
+        id: `g-ent-${Date.now()}`,
+        name: name,
+        message: message,
+        emoji: emoji,
+        timestamp: new Date().toISOString().split('T')[0],
+        color: colors[Math.floor(Math.random() * colors.length)]
+      };
+
+      guestbookEntries.unshift(newEntry);
+      localStorage.setItem('standalone-guestbook', JSON.stringify(guestbookEntries));
+
+      document.getElementById('guest-input-name').value = '';
+      document.getElementById('guest-input-message').value = '';
+
+      renderGuestbook();
+    }
+
+    function deleteGuestEntry(id) {
+      if (confirm("REMOVE GUESTBOOK MESSAGE?")) {
+        guestbookEntries = guestbookEntries.filter(g => g.id !== id);
+        localStorage.setItem('standalone-guestbook', JSON.stringify(guestbookEntries));
+        renderGuestbook();
+      }
+    }
+
+    function resetGuestbook() {
+      if (confirm("RESTORE ORIGINAL GUEST ENTRIES?")) {
+        guestbookEntries = [...DEFAULT_GUESTBOOK];
+        localStorage.setItem('standalone-guestbook', JSON.stringify(guestbookEntries));
+        renderGuestbook();
+      }
+    }
+
+    // Transmission Form
+    function submitTransmission(event) {
+      event.preventDefault();
+      const n = document.getElementById('trans-input-name').value;
+      const e = document.getElementById('trans-input-email').value;
+      const m = document.getElementById('trans-input-msg').value;
+
+      document.getElementById('transmission-console-logs').classList.remove('hidden');
+      const consoleNode = document.getElementById('transmission-console-logs');
+      consoleNode.innerHTML = '<div>⬤ RESOLVING SECURITY SECRETS...</div>';
+
+      setTimeout(() => {
+        consoleNode.innerHTML += '<div>⬤ SERIALIZING DATA PAYLOAD...</div>';
+      }, 500);
+      setTimeout(() => {
+        consoleNode.innerHTML += '<div>⬤ WRITING LOCALSTORAGE MAIL REGISTER v1...</div>';
+      }, 1000);
+      setTimeout(() => {
+        consoleNode.innerHTML += '<div class="text-[#00FF66]">⬤ SUCCESS: TRANSMISSION SEALED SECURELY!</div>';
+        
+        // Save state local list
+        const mails = JSON.parse(localStorage.getItem('standalone-mails') || '[]');
+        mails.push({ name: n, email: e, message: m, timestamp: new Date().toISOString() });
+        localStorage.setItem('standalone-mails', JSON.stringify(mails));
+
+        document.getElementById('transmission-form-view').classList.add('hidden');
+        document.getElementById('transmission-success-view').classList.remove('hidden');
+      }, 1500);
+    }
+
+    function resetTransmissionForm() {
+      document.getElementById('trans-input-name').value = '';
+      document.getElementById('trans-input-email').value = '';
+      document.getElementById('trans-input-msg').value = '';
+
+      document.getElementById('transmission-form-view').classList.remove('hidden');
+      document.getElementById('transmission-success-view').classList.add('hidden');
+      document.getElementById('transmission-console-logs').classList.add('hidden');
+    }
+
+    // Modal Control Deck
+    function toggleEditor() {
+      const d = document.getElementById('control-deck-window');
+      if (d.classList.contains('hidden')) {
+        d.classList.remove('hidden');
+      } else {
+        d.classList.add('hidden');
+      }
+    }
+
+    function switchTab(tabId) {
+      selectedSkillTab = tabId;
+      const profileTab = document.getElementById('tab-btn-profile');
+      const projectsTab = document.getElementById('tab-btn-projects');
+      const skillsTab = document.getElementById('tab-btn-skills');
+
+      profileTab.className = "flex-1 py-3 text-center font-bold tracking-tight uppercase border-r-4 border-black " + (tabId === 'profile' ? 'bg-[#FFD600] text-black' : 'bg-transparent text-stone-650');
+      projectsTab.className = "flex-1 py-3 text-center font-bold tracking-tight uppercase border-r-4 border-black " + (tabId === 'projects' ? 'bg-[#FF90E8] text-black' : 'bg-transparent text-stone-650');
+      skillsTab.className = "flex-1 py-3 text-center font-bold tracking-tight uppercase " + (tabId === 'skills' ? 'bg-[#A2D2FF] text-black' : 'bg-transparent text-stone-650');
+
+      if (tabId === 'profile') {
+        document.getElementById('tab-view-profile').classList.remove('hidden');
+        document.getElementById('tab-view-projects').classList.add('hidden');
+        document.getElementById('tab-view-skills').classList.add('hidden');
+      } else if (tabId === 'projects') {
+        document.getElementById('tab-view-profile').classList.add('hidden');
+        document.getElementById('tab-view-projects').classList.remove('hidden');
+        document.getElementById('tab-view-skills').classList.add('hidden');
+      } else {
+        document.getElementById('tab-view-profile').classList.add('hidden');
+        document.getElementById('tab-view-projects').classList.add('hidden');
+        document.getElementById('tab-view-skills').classList.remove('hidden');
+      }
+    }
+
+    function clearAllDataDefaults() {
+      if (confirm("ERASE LOCAL STORAGE PROFILE CACHES?")) {
+        localStorage.removeItem('standalone-user-info');
+        localStorage.removeItem('standalone-projects');
+        localStorage.removeItem('standalone-skills');
+        localStorage.removeItem('standalone-guestbook');
+        localStorage.removeItem('standalone-mails');
+        initializeSystem();
+        alert("RESET COMPLETE!");
+        toggleEditor();
+      }
+    }
+
+    // Bootstrap!
+    initializeSystem();
+  </script>
+</body>
+</html>

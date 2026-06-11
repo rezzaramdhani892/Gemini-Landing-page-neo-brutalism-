@@ -3,17 +3,21 @@ import { Project } from '../types';
 import { PROJECTS } from '../data';
 import { FolderGit, ExternalLink, ArrowRight, Tag, X, Star, Calendar, Flame } from 'lucide-react';
 
-export default function ProjectShowcase() {
+interface ProjectShowcaseProps {
+  projectsList?: Project[];
+}
+
+export default function ProjectShowcase({ projectsList = PROJECTS }: ProjectShowcaseProps) {
   const [selectedTag, setSelectedTag] = useState<string>('ALL');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   // Extract all unique tags
-  const allTags = ['ALL', ...Array.from(new Set(PROJECTS.flatMap(p => p.tags)))];
+  const allTags = ['ALL', ...Array.from(new Set(projectsList.flatMap(p => p.tags)))];
 
   // Filter projects list
   const filteredProjects = selectedTag === 'ALL'
-    ? PROJECTS
-    : PROJECTS.filter(p => p.tags.includes(selectedTag));
+    ? projectsList
+    : projectsList.filter(p => p.tags.includes(selectedTag));
 
   const getBrutalistColorClass = (color: string) => {
     switch (color) {
